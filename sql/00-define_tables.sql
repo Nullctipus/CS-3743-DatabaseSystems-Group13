@@ -1,0 +1,51 @@
+CREATE TABLE region (
+	region_id INT PRIMARY KEY,
+    human_readable VARCHAR(128)
+);
+
+CREATE TABLE truck_stop (
+	stop_id INT PRIMARY KEY,
+    region_id INT NOT NULL,
+    FOREIGN KEY (region_id) REFERENCES region(region_id),
+    human_readable VARCHAR(128),
+    
+    ts_address_line VARCHAR(128) NOT NULL,
+    ts_zipcode int NOT NULL,
+    ts_state VARCHAR(64) NOT NULL,
+    ts_city VARCHAR(64) NOT NULL,
+    ts_type VARCHAR(64) NOT NULL -- TODO: change to foreign table key might be wanted
+);
+
+CREATE TABLE crime (
+	crime_id INT PRIMARY KEY,
+    police_station_id INT NOT NULL,
+    stop_id INT NOT NULL,
+    FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
+    FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
+    
+    crime_type VARCHAR(64) NOT NULL,  -- TODO: change to foreign table key might be wanted
+    crime_date date NOT NULL,
+    crime_severity VARCHAR(64) NOT NULL  -- TODO: change to foreign table key might be wanted
+);
+
+CREATE TABLE police_station (
+	police_station_id INT PRIMARY KEY,
+    region_id INT,
+    FOREIGN KEY (region_id) REFERENCES region(region_id),
+    -- Address
+    address_line VARCHAR(128) NOT NULL,
+    zipcode int NOT NULL,
+    state VARCHAR(64) NOT NULL,
+    city VARCHAR(64) NOT NULL,
+    
+    personnel INT NOT NULL DEFAULT(0)
+);
+
+CREATE TABLE stop_station_in_reach (
+    police_station_id INT NOT NULL,
+    stop_id INT NOT NULL,
+    FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
+    FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
+    
+	miles INT
+);
