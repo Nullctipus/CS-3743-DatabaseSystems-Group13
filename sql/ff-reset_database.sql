@@ -1,0 +1,4 @@
+-- CLEAN
+DROP DATABASE IF EXISTS Project;
+CREATE DATABASE Project;
+USE Project;

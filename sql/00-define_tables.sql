@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS crime (
     crime_severity VARCHAR(64) NOT NULL  -- TODO: change to foreign table key might be wanted
 );
 
-CREATE TABLE IF NOT EXISTS stop_station_in_reach (
+CREATE TABLE IF NOT EXISTS distance (
     police_station_id INT NOT NULL,
     stop_id INT NOT NULL,
     FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
