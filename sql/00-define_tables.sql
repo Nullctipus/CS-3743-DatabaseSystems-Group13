@@ -1,9 +1,9 @@
-CREATE TABLE region (
+CREATE TABLE IF NOT EXISTS region (
 	region_id INT PRIMARY KEY,
     human_readable VARCHAR(128)
 );
 
-CREATE TABLE truck_stop (
+CREATE TABLE IF NOT EXISTS truck_stop (
 	stop_id INT PRIMARY KEY,
     region_id INT NOT NULL,
     FOREIGN KEY (region_id) REFERENCES region(region_id),
@@ -16,19 +16,8 @@ CREATE TABLE truck_stop (
     ts_type VARCHAR(64) NOT NULL -- TODO: change to foreign table key might be wanted
 );
 
-CREATE TABLE crime (
-	crime_id INT PRIMARY KEY,
-    police_station_id INT NOT NULL,
-    stop_id INT NOT NULL,
-    FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
-    FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
-    
-    crime_type VARCHAR(64) NOT NULL,  -- TODO: change to foreign table key might be wanted
-    crime_date date NOT NULL,
-    crime_severity VARCHAR(64) NOT NULL  -- TODO: change to foreign table key might be wanted
-);
 
-CREATE TABLE police_station (
+CREATE TABLE IF NOT EXISTS police_station (
 	police_station_id INT PRIMARY KEY,
     region_id INT,
     FOREIGN KEY (region_id) REFERENCES region(region_id),
@@ -41,7 +30,19 @@ CREATE TABLE police_station (
     personnel INT NOT NULL DEFAULT(0)
 );
 
-CREATE TABLE stop_station_in_reach (
+CREATE TABLE IF NOT EXISTS crime (
+	crime_id INT PRIMARY KEY,
+    police_station_id INT NOT NULL,
+    stop_id INT NOT NULL,
+    FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
+    FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
+    
+    crime_type VARCHAR(64) NOT NULL,  -- TODO: change to foreign table key might be wanted
+    crime_date date NOT NULL,
+    crime_severity VARCHAR(64) NOT NULL  -- TODO: change to foreign table key might be wanted
+);
+
+CREATE TABLE IF NOT EXISTS stop_station_in_reach (
     police_station_id INT NOT NULL,
     stop_id INT NOT NULL,
     FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
