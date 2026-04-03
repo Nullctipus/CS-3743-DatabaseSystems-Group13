@@ -22,12 +22,12 @@ CREATE TABLE IF NOT EXISTS police_station (
     region_id INT,
     FOREIGN KEY (region_id) REFERENCES region(region_id),
     -- Address
-    address_line VARCHAR(128) NOT NULL,
-    zipcode int NOT NULL,
-    state VARCHAR(64) NOT NULL,
-    city VARCHAR(64) NOT NULL,
+    ps_address_line VARCHAR(128) NOT NULL,
+    ps_zipcode int NOT NULL,
+    ps_state VARCHAR(64) NOT NULL,
+    ps_city VARCHAR(64) NOT NULL,
     
-    personnel INT NOT NULL DEFAULT(0)
+    ps_personnel INT NOT NULL DEFAULT(0)
 );
 
 CREATE TABLE IF NOT EXISTS crime (
