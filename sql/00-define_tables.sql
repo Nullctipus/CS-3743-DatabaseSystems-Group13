@@ -13,7 +13,9 @@ CREATE TABLE IF NOT EXISTS truck_stop (
     ts_zipcode int NOT NULL,
     ts_state VARCHAR(64) NOT NULL,
     ts_city VARCHAR(64) NOT NULL,
-    ts_type VARCHAR(64) NOT NULL -- TODO: change to foreign table key might be wanted
+    ts_type VARCHAR(64) NOT NULL, -- TODO: change to foreign table key might be wanted
+    
+    ts_risk decimal(10,4)
 );
 
 
@@ -48,5 +50,5 @@ CREATE TABLE IF NOT EXISTS distance (
     FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
     FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
     
-	miles INT
+	miles int
 );
