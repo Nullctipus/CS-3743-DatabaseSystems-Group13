@@ -45,3 +45,7 @@ LEFT JOIN police_station ps ON r.region_id = ps.region_id
 GROUP BY r.region_id, r.human_readable
 ORDER BY station_count DESC;
 
+-- shows unique cities with Truck Stops across Texas 
+SELECT
+    DISTINCT ts.city
+from truck_stops ts
