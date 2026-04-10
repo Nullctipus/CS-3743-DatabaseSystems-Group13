@@ -1,7 +1,7 @@
 USE Project;
 
---Insert region dataa
-INSERT INTO region(Region_ID, Region_Name)
+--Insert region data
+INSERT INTO region(Region_ID, human_readable)
 VALUES
 (1, 'North'),
 (2, 'South'),
