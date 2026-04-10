@@ -103,3 +103,44 @@ VALUES
 (22, 5, '5555 Airport Blvd', 78751, 'TX', 'Austin'),
 (23, 5, '5805 N Lamar Blvd', 78752, 'TX', 'Austin'),
 (24, 5, '4201 Ed Bluestein Blvd', 78721, 'TX', 'Austin');
+
+-- Insert crime data
+-- NOTE:
+-- The crime CSV provides Crime_ID, City, State, County, Offense, and Location,
+-- but the crime table also requires police_station_id, stop_id, crime_date,
+-- and crime_severity. Replace the TODO values below with the correct IDs/dates/severity.
+
+INSERT INTO crime (
+    crime_id,
+    police_station_id,
+    stop_id,
+    crime_type,
+    crime_date,
+    crime_severity
+)
+VALUES
+(1,  /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(2,  /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(3,  /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(4,  /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(5,  /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(6,  /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(7,  /* TODO police_station_id */, /* TODO stop_id */, 'Drug/Narcotic Violations', 'YYYY-MM-DD', '1'),
+(8,  /* TODO police_station_id */, /* TODO stop_id */, 'Drug/Narcotic Violations', 'YYYY-MM-DD', '1'),
+(9,  /* TODO police_station_id */, /* TODO stop_id */, 'Drug/Narcotic Violations', 'YYYY-MM-DD', '1'),
+(10, /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(11, /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(12, /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(13, /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(14, /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(15, /* TODO police_station_id */, /* TODO stop_id */, 'Theft From Motor Vehicle', 'YYYY-MM-DD', '1'),
+(16, /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(17, /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(18, /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(19, /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(20, /* TODO police_station_id */, /* TODO stop_id */, 'All Other Larceny', 'YYYY-MM-DD', '1'),
+(21, /* TODO police_station_id */, /* TODO stop_id */, 'All Other Larceny', 'YYYY-MM-DD', '1'),
+(22, /* TODO police_station_id */, /* TODO stop_id */, 'All Other Larceny', 'YYYY-MM-DD', '1'),
+(23, /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1'),
+(24, /* TODO police_station_id */, /* TODO stop_id */, 'Motor Vehicle Theft', 'YYYY-MM-DD', '1');
+
