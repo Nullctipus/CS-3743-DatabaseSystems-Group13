@@ -47,5 +47,13 @@ ORDER BY station_count DESC;
 
 -- shows unique cities with Truck Stops across Texas 
 SELECT
-    DISTINCT ts.city
-from truck_stops ts
+    DISTINCT ts.city AS station_city
+FROM truck_stops ts;
+
+SELECT
+    ts.stop_id AS truck_ID
+FROM truck_stop ts
+WHERE s.stop_id NOT IN (
+    SELECT DISTINCT c.stop_id
+FROM crime c
+);
