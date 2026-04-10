@@ -1,0 +1,26 @@
+Stop_ID,Region_ID,Stop_Address_Line,Stop_City,Stop_State,Stop_Zipcode,Stop_Type
+1,5,8839 SW Loop 410,San Antonio,TX,78252,Truck
+2,5,43 US Highway 87,Comfort,TX,78013,Truck
+3,5,1842 N Foster Rd,San Antonio,TX,78244,Truck
+4,5,13745 N Ih 35, Jarrell,TX,76537,Gas
+5,5,Cotton Gin Rd,Troy,TX,76579,Truck
+6,5,2537 TX-21,Paige,TX,78659,Truck
+7,1,8055 I 35 S,Waco,TX,76706,Truck
+8,4,3880 Loop 467,Sonora,TX,76950,Truck
+9,4,1501 US-287 N Bus,Midlothian,TX,76065,Truck
+10,1,2105 S Goliad St,Rockwall,TX,75032,Truck
+11,1,7425 Bonnie View Rd,Dallas,TX,75241,Truck
+12,3,15919 North Fwy,Houston,TX,77090,Truck
+13,3,12210 Galveston Rd,Houston,TX,77034,Gas
+14,2,1101 Uniroyal Dr,Laredo,TX,78045,Truck
+15,2,1451 US-77 Bus,Kingsville,TX,78363,Truck
+16,4,1333 US-283 N, Baird,TX,79504,Truck
+17,4,5200 Cholla Rd,Midland,TX,79706,Truck
+18,4,4221 N Interstate 27, Lubbock,TX,79403,Truck
+19,4,6930 E Interstate 40,Amarillo,TX,79118,Truck
+20,4,1295 Horizon Blvd, El Paso,TX,79927,Truck
+21,4,581 Vinton Rd,Vinton,TX,79821,Truck
+22,4,3002 US-57 N, Eagle Pass,TX,78852,Truck
+23,1,1124 Central Fwy,Wichita Falls,TX,76301,Truck
+24,1,10101 Jacksboro Hwy,Fort Worth,TX,76135,Truck
+25,4,202 20 Frontage Rd,Cisco,TX,76437,Truck
