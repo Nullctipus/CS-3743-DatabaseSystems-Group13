@@ -1,3 +1,17 @@
+CREATE TABLE IF NOT EXISTS severity (
+	severity_id INT PRIMARY KEY,
+	human_readable VARCHAR(16)
+)
+
+CREATE TABLE IF NOT EXISTS crimes (
+	crime_type_id INT PRIMARY KEY,
+	human_readable VARCHAR(32)
+);
+CREATE TABLE IF NOT EXISTS stops (
+	stops_id INT PRIMARY KEY,
+	human_readable VARCHAR(32)
+)
+
 CREATE TABLE IF NOT EXISTS region (
 	region_id INT PRIMARY KEY,
     human_readable VARCHAR(128)
@@ -13,7 +27,8 @@ CREATE TABLE IF NOT EXISTS truck_stop (
     ts_zipcode int NOT NULL,
     ts_state VARCHAR(64) NOT NULL,
     ts_city VARCHAR(64) NOT NULL,
-    ts_type VARCHAR(64) NOT NULL, -- TODO: change to foreign table key might be wanted
+    ts_type INT NOT NULL, 
+	FOREIGN KEY (ts_type) REFERENCES stops(ts_type)
     
     ts_risk decimal(10,4)
 );
@@ -39,9 +54,11 @@ CREATE TABLE IF NOT EXISTS crime (
     FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
     FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
     
-    crime_type VARCHAR(64) NOT NULL,  -- TODO: change to foreign table key might be wanted
+    crime_type INT NOT NULL,  -- TODO: change to foreign table key might be wanted
     crime_date date NOT NULL,
-    crime_severity VARCHAR(64) NOT NULL  -- TODO: change to foreign table key might be wanted
+    crime_severity INT NOT NULL,
+    FOREIGN KEY (crime_type) REFERENCES crimes(crime_type),
+    FOREIGN KEY (crime_severity) REFERENCES severity(crime_severity)
 );
 
 CREATE TABLE IF NOT EXISTS distance (
@@ -50,5 +67,5 @@ CREATE TABLE IF NOT EXISTS distance (
     FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
     FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
     
-	miles int
+	miles INT
 );
