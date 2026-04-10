@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS crime (
     FOREIGN KEY (police_station_id) REFERENCES police_station(police_station_id),
     FOREIGN KEY (stop_id) REFERENCES truck_stop(stop_id),
     
-    crime_type INT NOT NULL,  -- TODO: change to foreign table key might be wanted
+    crime_type INT NOT NULL,
     crime_date date NOT NULL,
     crime_severity INT NOT NULL,
     FOREIGN KEY (crime_type) REFERENCES crimes(crime_type),
