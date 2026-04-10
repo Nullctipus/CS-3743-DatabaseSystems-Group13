@@ -47,3 +47,38 @@ VALUES
 (23, 1, NULL, '1124 Central Fwy', '76301', 'TX', 'Wichita Falls', 'Truck', NULL),
 (24, 1, NULL, '10101 Jacksboro Hwy', '76135', 'TX', 'Fort Worth', 'Truck', NULL),
 (25, 4, NULL, '202 20 Frontage Rd', '76437', 'TX', 'Cisco', 'Truck', NULL);
+
+-- Insert police station data
+INSERT INTO police_station (
+    police_station_id,
+    region_id,
+    ps_address_line,
+    ps_zipcode,
+    ps_state,
+    ps_city
+)
+VALUES
+(1, 4, '911 N Raynor St', 79903, 'TX', 'El Paso'),
+(2, 4,'9600 Dyer St', 79924, 'TX', 'El Paso'),
+(3, 2, '4712 Maher Ave', 78041, 'TX', 'Laredo'),
+(4, 1,'2600 W Travis St', 75092, 'TX', 'Sherman'),
+(5, 1, '505 W Felix St', 76115, 'TX', 'Ft Worth'),
+(6, 1, '8755 N Riverside Dr', 76244, 'TX', 'Ft Worth'),
+(7, 1, '1400 Botham Jean Blvd', 75215, 'TX', 'Dallas'),
+(8, 1, '725 N Jim Miller Rd', 75217, 'TX', 'Dallas'),
+(9, 1, '334 S Hall St', 75226, 'TX', 'Dallas'),
+(10, 1, '620 W Division St', 76011, 'TX', 'Arlington'),
+(11, 1, '1030 SW Green Oaks Blvd', 76017, 'TX', 'Arlington'),
+(12, 1, '2060 W Green Oaks Blvd', 76013, 'TX', 'Arlington'),
+(13, 3, '1200 Travis St', 77002, 'TX', 'Houston'),
+(14, 5, '3635 E Houston St', 78219, 'TX', 'San Antonio'),
+(15, 3, '61 Riesner St', 77002, 'TX', 'Houston'),
+(16, 3, '1400 Boston Ave', 77627, 'TX', 'Nederland'),
+(17, 1, '2600 W Travis St', 75092, 'TX', 'Sherman'),
+(18, 2, '217 E Market St', 78387, 'TX', 'Sinton'),
+(19, 3, '2004 N Cleveland St', 77535, 'TX', 'Dayton'),
+(20, 5, '5020 Prue Rd', 78240, 'TX', 'San Antonio'),
+(21, 5, '8600 Wurzbach Rd', 78240, 'TX', 'San Antonio'),
+(22, 5, '5555 Airport Blvd', 78751, 'TX', 'Austin'),
+(23, 5, '5805 N Lamar Blvd', 78752, 'TX', 'Austin'),
+(24, 5, '4201 Ed Bluestein Blvd', 78721, 'TX', 'Austin');
