@@ -56,3 +56,11 @@ WHERE ts.stop_id NOT IN (
     SELECT DISTINCT c.stop_id
 FROM crime c
 );
+
+-- List all distances in human readable text to display to a user
+SELECT CONCAT("Police Station at ", ps.ps_address_line,", ",ps.ps_city, " ", ps.ps_state, " is ", d.miles, " miles from ", ts.human_readable) AS human_distance
+FROM distance d
+JOIN truck_stop ts
+ON ts.stop_id = d.stop_id
+JOIN police_station ps
+ON ps.police_station_id = d.police_station_id;
