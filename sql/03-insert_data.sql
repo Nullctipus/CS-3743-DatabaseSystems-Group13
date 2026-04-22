@@ -21,8 +21,8 @@ INSERT INTO severity(severity_id, human_readable)
 -- Insert Stop types
 INSERT INTO stops(stops_id,human_readable)
 	VALUES
-	(1, 'Truck'),
-	(2, 'Gas');
+	(1, 'Truck Stop'),
+	(2, 'Gas Station');
 
 -- Crime types
 INSERT INTO crimes(crime_type_id, human_readable)

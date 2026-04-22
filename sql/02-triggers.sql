@@ -29,7 +29,8 @@ ON truck_stop
 FOR EACH ROW
 BEGIN
 	IF NEW.human_readable IS NULL THEN
-		SET NEW.human_readable = CONCAT(NEW.ts_type," at ", NEW.ts_address_line," ", NEW.ts_city);
+    
+		SET NEW.human_readable = CONCAT((SELECT s.human_readable FROM stops s WHERE s.stops_id = NEW.ts_type), " at ", NEW.ts_address_line," ", NEW.ts_city);
     END IF;
 END //
 
