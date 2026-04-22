@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS severity (
 	severity_id INT PRIMARY KEY,
 	human_readable VARCHAR(16)
-)
+);
 
 CREATE TABLE IF NOT EXISTS crimes (
 	crime_type_id INT PRIMARY KEY,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS crimes (
 CREATE TABLE IF NOT EXISTS stops (
 	stops_id INT PRIMARY KEY,
 	human_readable VARCHAR(32)
-)
+);
 
 CREATE TABLE IF NOT EXISTS region (
 	region_id INT PRIMARY KEY,
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS truck_stop (
     ts_state VARCHAR(64) NOT NULL,
     ts_city VARCHAR(64) NOT NULL,
     ts_type INT NOT NULL, 
-	FOREIGN KEY (ts_type) REFERENCES stops(ts_type)
+	FOREIGN KEY (ts_type) REFERENCES stops(stops_id),
     
     ts_risk decimal(10,4)
 );
@@ -42,9 +42,7 @@ CREATE TABLE IF NOT EXISTS police_station (
     ps_address_line VARCHAR(128) NOT NULL,
     ps_zipcode int NOT NULL,
     ps_state VARCHAR(64) NOT NULL,
-    ps_city VARCHAR(64) NOT NULL,
-    
-    ps_personnel INT NOT NULL DEFAULT(0)
+    ps_city VARCHAR(64) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS crime (
@@ -57,8 +55,8 @@ CREATE TABLE IF NOT EXISTS crime (
     crime_type INT NOT NULL,
     crime_date date NOT NULL,
     crime_severity INT NOT NULL,
-    FOREIGN KEY (crime_type) REFERENCES crimes(crime_type),
-    FOREIGN KEY (crime_severity) REFERENCES severity(crime_severity)
+    FOREIGN KEY (crime_type) REFERENCES crimes(crime_type_id),
+    FOREIGN KEY (crime_severity) REFERENCES severity(severity_id)
 );
 
 CREATE TABLE IF NOT EXISTS distance (

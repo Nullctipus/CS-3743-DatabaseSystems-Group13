@@ -56,6 +56,8 @@ to_addrs = [
     "5555 Airport Blvd, Austin Texas",
     "5805 N Lamar Blvd, Austin Texas",
     "4201 Ed Bluestein Blvd, Austin Texas",
+    "601 N Loraine St, Midland Texas",
+    "911 S 1st St W, Clyde Texas",
 ]
 
 

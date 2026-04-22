@@ -16,7 +16,7 @@ BEGIN
     -- Crime stats
     SELECT 
         AVG(c.crime_severity),
-        AVG(c.crime_date),
+        DATE_ADD('1900-01-01', INTERVAL AVG(DATEDIFF(c.crime_date, '1900-01-01')) DAY),
         COUNT(*)
     INTO avg_severity, avg_date, crime_count
     FROM crime c
@@ -46,12 +46,14 @@ BEGIN
     RETURN (min_dist / station_count) * avg_dist * crime_stat;
 END //
 
+SET SQL_SAFE_UPDATES = 0;
+
 -- Set a maximum distance between areas 
 CREATE PROCEDURE p_prune_references_to_distance(IN distance INT)
 BEGIN
 	-- Delete police station stop references
 	DELETE FROM distance d
-    WHERE d.miles < distance;
+    WHERE d.miles > distance;
     -- Delete crimes where the station and stop no longer interact
     DELETE FROM crime c
     WHERE NOT EXISTS (

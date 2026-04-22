@@ -7,15 +7,13 @@ JOIN truck_stop ts ON r.region_id = ts.region_id
 JOIN crime c ON ts.stop_id = c.stop_id
 GROUP BY r.region_id;
 
--- number of police per number of crimes
+-- number of crimes in a city
 SELECT 
     ps.ps_city, 
-    ps.ps_personnel, 
-    COUNT(c.crime_id) AS crime_count,
-    CAST(COUNT(c.crime_id) AS FLOAT) / NULLIF(ps.ps_personnel, 0) AS crimes_per_officer
+    COUNT(c.crime_id) AS crime_count
 FROM police_station ps
 LEFT JOIN crime c ON ps.police_station_id = c.police_station_id
-GROUP BY ps.police_station_id;
+GROUP BY ps.ps_city;
 
 -- truck stops with high risk and distance from nearest station
 SELECT 
@@ -47,14 +45,14 @@ ORDER BY station_count DESC;
 
 -- shows unique cities with truck stops across Texas 
 SELECT
-    DISTINCT ts.city AS station_city
-FROM truck_stops ts;
+    DISTINCT ts_city AS station_city
+FROM truck_stop ts;
 
 -- reflects all truck stops with no crimes reported
 SELECT
     ts.stop_id AS truck_ID
 FROM truck_stop ts
-WHERE s.stop_id NOT IN (
+WHERE ts.stop_id NOT IN (
     SELECT DISTINCT c.stop_id
 FROM crime c
 );
