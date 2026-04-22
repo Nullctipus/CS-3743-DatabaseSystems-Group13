@@ -1,25 +1,25 @@
 Crime_ID,City,State,County,Offense,Location,Crime_Severity
-1,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,5
-2,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,4
-3,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,3
-4,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,2
+1,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,1
+2,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,3
+3,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,2
+4,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,5
 5,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,1
-6,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,5
-7,Dallas,Texas,COLLIN,Drug/Narcotic Violations,Service/Gas Station,5
-8,Dallas,Texas,COLLIN,Drug/Narcotic Violations,Service/Gas Station,4
-9,Dallas,Texas,COLLIN,Drug/Narcotic Violations,Service/Gas Station,1
+6,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,1
+7,Dallas,Texas,COLLIN,Drug/Narcotic Violations,Service/Gas Station,1
+8,Dallas,Texas,COLLIN,Drug/Narcotic Violations,Service/Gas Station,2
+9,Dallas,Texas,COLLIN,Drug/Narcotic Violations,Service/Gas Station,4
 10,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,1
-11,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,5
-12,Houston,Texas,FORT BEND,Theft From Motor Vehicle,Service/Gas Station,5
-13,Houston,Texas,FORT BEND,Theft From Motor Vehicle,Service/Gas Station,3
-14,San Antonio,Texas,BEXAR,Theft From Motor Vehicle,Service/Gas Station,4
-15,San Antonio,Texas,BEXAR,Theft From Motor Vehicle,Service/Gas Station,3
-16,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,1
-17,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,1
-18,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,1
-19,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,3
-20,Dallas,Texas,COLLIN,All Other Larceny,Service/Gas Station,2
-21,Dallas,Texas,COLLIN,All Other Larceny,Service/Gas Station,1
-22,Carrollton,Texas,COLLIN,All Other Larceny,Service/Gas Station,4
-23,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,5
-24,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,2
+11,Dallas,Texas,COLLIN,Theft From Motor Vehicle,Service/Gas Station,1
+12,Houston,Texas,FORT BEND,Theft From Motor Vehicle,Service/Gas Station,3
+13,Houston,Texas,FORT BEND,Theft From Motor Vehicle,Service/Gas Station,2
+14,San Antonio,Texas,BEXAR,Theft From Motor Vehicle,Service/Gas Station,2
+15,San Antonio,Texas,BEXAR,Theft From Motor Vehicle,Service/Gas Station,1
+16,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,5
+17,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,2
+18,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,3
+19,Fort Worth,Texas,DENTON,Motor Vehicle Theft,Service/Gas Station,1
+20,Dallas,Texas,COLLIN,All Other Larceny,Service/Gas Station,1
+21,Dallas,Texas,COLLIN,All Other Larceny,Service/Gas Station,2
+22,Carrollton,Texas,COLLIN,All Other Larceny,Service/Gas Station,1
+23,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,3
+24,Houston,Texas,FORT BEND,Motor Vehicle Theft,Service/Gas Station,1
